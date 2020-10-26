@@ -3,11 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/main.css"/>
+    <link rel="stylesheet" href="./public/css/main.css"/>
     <title>Bienvenue chez Ohmyfood</title>
 </head>
 <body>
-    <div class="logo">LOGO</div>
-    <h1>Bienvenue!</h1>
+    <header>
+        <img src="" alt="Ohmyfood" class="header__logo">
+
+        <div id="header__searchbar">
+            <img src="" alt="localisation" id="localisation">
+            <form>
+                <input type="text" id="type_bar">
+            </form>
+        </div>
+
+        <div id="header__body">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Dévouvrez des restaurants d'exception, selectionnés par nos soins</p>
+        </div>
+
+        <button id="header__button">
+            Explorez nos restaurants
+        </button>
+    </header>
+
+    <main>
+        <section id="functioning">
+            <h1>Fonctionnement</h1>
+
+            <button class="button button--active">
+                <div class="button__number">1</div>
+                <img src="" alt="restaurant selection" class="button__logo button__logo--active">
+                Choisissez un restaurants
+            </button>
+
+            <button class="button button--active">
+                <div class="button__number">2</div>
+                <img src="" alt="compete your menu" class="button__logo button__logo--active">
+                Composez votre menu
+            </button>
+
+            <button class="button button--active">
+                <div class="button__number">3</div>
+                <img src="" alt="Enjoy at the restaurant" class="button__logo button__logo--active">
+                Dégustez au restaurant
+            </button>
+        </section>
+
+        <section id="restaurant">
+            <h1>Restaurants</h1>
+
+            <article class="menucard">
+                <a href="tastepalette_menu.html">
+                    <img src="./images/restaurants/taste_palette.jpg" alt="" class="menucard__img">
+                    <div class="menucard__new">Nouveau</div>
+                    <h2 class="menucard__title">La palette du goût</h2>
+                    <p>Ménilmontant</p>
+               </a>
+               <img src="" alt="like" class="menucard__logo menucard__logo--active">
+            </article>
+
+            <article class="menucard">
+                <a href="enchantednote_menu.html" target="_blank">
+                    <img src="./images/restaurants/enchanted_note.jpg" alt="" class="menucard__img">
+                    <div class="menucard__new">Nouveau</div>
+                    <h2 class="menucard__title">La note enchantée</h2>
+                    <p>Charonne</p>
+                </a>
+                <img src="" alt="like" class="menucard__logo menucard__logo--active">
+            </article>
+
+            <article class="menucard">
+                <a href="french_menu.html">
+                    <img src="./images/restaurants/french_menu.jpg" alt="" class="menucard__img">
+                    <h2 class="menucard__title">À la française</h2>
+                    <p>Cité Rouge</p>
+                </a>
+                <img src="" alt="like" class="menucard__logo menucard__logo--active">
+            </article>
+
+            <article class="menucard">
+                <a href="delightsenses_menu.html">
+                    <img src="./images/Restaurants/delight_senses.jpg" alt="" class="menucard__img">
+                    <h2 class="menucard__title">Le décile des sens</h2>
+                    <p>Folie Méricourt</p>
+                </a>
+                <img src="" alt="like" class="menucard__logo menucard__logo--active">
+            </article>
+
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer__container">
+            <img src="" alt="Ohmyfood" class="footer__logo">
+            <div class="footer__iconlink">
+                <img src="" alt="suggest a restaurant" class="footer__logo">
+                <a href="" class="footer__link">Proposer un restaurant</a>
+                <img src="" alt="Becoming a Partner" class="footer__logo">
+                <a href="" class="footer__link">Devenir partenaire</a>
+            </div>
+            <a href="" class="footer__link">Mentions légales</a>
+            <a href="mailto:ohmyfood.xxxx@gmail.com" class="footer__link">Contact</a>
+        </div>
+    </footer>
 </body>
 </html>
