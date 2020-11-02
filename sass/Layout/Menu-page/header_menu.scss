@@ -1,0 +1,13 @@
+.header__menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 0rem;
+    .fas{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: $color-logo;
+        margin: 0rem 1.85rem;
+    }
+}

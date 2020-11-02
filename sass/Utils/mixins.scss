@@ -1,0 +1,33 @@
+@mixin color-logo($color: lightness-swift($color-logo)) {
+    color: $color;
+}
+
+@mixin border-btn {
+    border-radius: 2rem;
+    border: none;
+    box-shadow: gray 0px 2px 8px 0px;
+    background-color: $color-searchbar;
+}
+
+@mixin footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.50rem 2rem;
+    width: 30%;
+    line-height: 2rem;
+}
+
+@mixin size-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin color-btn($color: lightness-shift($color-primary)){
+    color: gray
+}

@@ -1,0 +1,19 @@
+@import "./Utils/variables.scss";
+@import "./Utils/mixins.scss";
+@import "./Utils/functions.scss";
+
+@import "./Base/base.scss";
+
+@import "./Layout/header.scss";
+@import "./Layout/footer.scss";
+@import "./Layout/section_functioning.scss";
+@import "./Layout/section_restaurant.scss";
+@import "./Layout/Menu-page/header_menu.scss";
+@import "./Layout/Menu-page/main_menu.scss";
+
+@import "./Components/header_btn.scss";
+@import "./Components/card_menu.scss";
+@import "./Components/btn_functioning.scss";
+@import "./Components/Menu-page/menu_button.scss";
+@import "./Components/Menu-page/btn_order.scss";
+

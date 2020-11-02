@@ -1,0 +1,40 @@
+.functioning__btn{
+    width: 300px;
+    padding: 2rem 2rem;
+    margin: 20px 20px;
+    @include border-btn;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color-primary, 35%);
+        box-shadow: gray 0px 5px 10px 0px;
+    }
+    &:hover i{
+        color: $color-primary;
+    }
+    .fas{
+        color: gray;
+        font-size: 1.5em;
+    }
+    .btn__number{
+        padding: 0.5rem;
+        border-radius: 5rem;
+        background-color: $color-primary;
+        @include size-icon;
+        @include flex-center;
+        color:#ffffff;
+        position: absolute;
+        left: -18px;
+    }
+}
+
+@media #{$phone}{
+    .functioning__btn{
+        padding: 1rem 2rem;
+        width: 80%;
+        
+    }
+}

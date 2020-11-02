@@ -1,0 +1,13 @@
+.button__order{
+    margin: 2rem 1.85rem;
+    padding: 1rem 3rem;
+    @include border-btn;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: $color-card;
+    font-weight: bold;
+    cursor: pointer;
+        &:hover{
+        background-color: lighten($color-primary, 35%);
+        box-shadow: gray 0px 5px 10px 0px;
+    }
+}

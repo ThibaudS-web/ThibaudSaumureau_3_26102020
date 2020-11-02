@@ -1,0 +1,59 @@
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem 0rem;
+    background-color:$color-searchbar;
+    box-shadow: inset 0px 10px 10px $color-searchbar-border;
+    &__logo{
+        margin-right: 2%;
+        @include size_icon;
+    }
+    &__input{
+        width: 140px;
+        border: none;
+        border-radius: 2rem;
+        font-size: 1rem;
+        background-color:$color-searchbar;
+        padding: .5rem;
+        font-weight: bold;
+        color: #000;
+    }
+}
+
+.header__body{
+    background-color: $color-header;
+    padding: 2rem 1.85rem;
+    margin-bottom: 2rem;
+    h2{
+        width: 75%;
+        font-size: 1.5rem; 
+        
+    }
+    p{
+        width: 80%;
+    }
+   
+}
+
+
+@media #{$phone}{
+    .container__logo{
+        text-align: center;
+        .header__logo{
+        width: 150px;
+        }  
+    }
+}
+
+@media #{$phone}{
+    .header__body{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        text-align: center;
+        h2{
+            margin: 0;
+        }
+    }
+}

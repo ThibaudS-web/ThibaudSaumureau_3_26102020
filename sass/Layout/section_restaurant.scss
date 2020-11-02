@@ -1,0 +1,27 @@
+.restaurant{
+    background-color: $color-header;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 850px;
+    h2{
+        width: 100%;
+        margin: .5rem;
+    }
+}
+
+@media #{$tablet}{
+    .restaurant{
+       height: 1300px;
+    }
+}
+
+@media #{$phone} {
+    .restaurant{
+        height: 1100px;
+    }
+
+}
+
+

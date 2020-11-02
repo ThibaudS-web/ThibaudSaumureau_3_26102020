@@ -1,0 +1,89 @@
+.menucard{
+    background: $color-card;
+    width: 40%;
+    height: 35%;
+    display: flex;
+    position: relative;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: gray 0px 2px 8px 0px;
+    
+    &__like{    
+        position: absolute;
+        color: black;
+        bottom: 40px;
+        right: 30px;
+        cursor: pointer;  
+        font-size: 1.5em;
+    }
+    &__like--hover{
+        background-image: linear-gradient($color-secondary, $color-primary);
+        opacity: 0;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        transition: all 350ms;
+        transform: scale(1);
+        transform-origin: center;
+        &:hover{ 
+            transform: scale(1.11);
+            opacity: 1;
+        }
+    }
+    &__link{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column; 
+        position: relative;
+        color: #000;
+        .menucard__new{
+            position: absolute;
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 40%);
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            right: 20px;
+            top: 20px;
+        }
+        .menucard__body{
+            width: 70%;
+            margin-left: 5%;
+            
+        }
+    }
+    &__img{
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: 50% 60%;
+           object-position: 50% 60%;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: 100%;
+        height: 70%;
+    }
+}
+
+
+
+@media #{$tablet} {
+    .menucard{
+        width: 70%;
+        height: 20%;
+        &__like{
+            bottom: 30px;
+        }
+        &__body{
+            line-height: .5em;
+            margin-top: 1%;
+        }
+    }
+}
+
+@media #{$phone} {
+    .menucard{
+        width: 95%;
+        height: 22%;
+    }
+}

@@ -1,0 +1,45 @@
+.footer{
+    background-color: $color-footer;
+    a{
+        color: white;
+    }
+    
+    &__container{  
+        @include footer;
+    }
+        .footer__logo{
+            margin-bottom: 2rem;
+            width: 200px;   
+          }  
+
+        &__iconlink{
+            display: flex;
+            align-items: center;
+             
+            img{
+                margin-right: 5%;
+                @include size-icon;
+            }
+        }
+        
+        &__link--hover{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+}
+
+
+
+
+@media #{$phone}{
+    .footer{
+        &__container{
+            width: 80%;
+        }
+        .footer__logo{
+        width: 110px;
+        margin-bottom: 1rem;
+        }
+    }
+}

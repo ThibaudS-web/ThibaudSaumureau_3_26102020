@@ -1,0 +1,55 @@
+.picture_menu{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0% 65%;
+}
+
+.part_menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.menu{
+    background-color: $color-header;
+    &__head{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .menu__like{ 
+        display: none;
+        position: absolute;
+        color: black;
+        right: 15%;
+        cursor: pointer;  
+        font-size: 1.5em;
+    }
+
+    .menu__like--hover{
+        background-image: linear-gradient($color-secondary, $color-primary);
+        opacity: 0;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        transition: all 350ms;
+        transform: scale(1);
+        transform-origin: center;
+        &:hover{ 
+            transform: scale(1.11);
+            opacity: 1;
+        }
+    }
+}
+
+h2{
+    margin-left: 1.85rem;
+    width: 100%;
+    margin: 2rem 1.85rem;
+    background-color: $color-tertiary;
+    text-align: center;
+    border-radius: 2rem;
+}
+
