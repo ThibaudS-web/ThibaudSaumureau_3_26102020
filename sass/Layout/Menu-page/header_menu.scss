@@ -6,8 +6,20 @@
     .fas{
         display: flex;
         align-items: center;
-        font-size: 2rem;
+        font-size: 1rem;
         color: $color-logo;
         margin: 0rem 1.85rem;
     }
+}
+
+@media #{$phone}{
+    .header__logo{
+        width: 150px;
+        margin: auto;
+    }
+    .fa-arrow-left{
+        position: absolute;
+        top: 20px;
+    }
+
 }

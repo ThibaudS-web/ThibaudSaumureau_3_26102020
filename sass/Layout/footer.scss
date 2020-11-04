@@ -2,6 +2,13 @@
     background-color: $color-footer;
     a{
         color: white;
+        @media #{$tablet}{
+            font-size: .9rem;
+        }
+        @media #{$phone}{
+            font-size: .8rem;
+        }
+        
     }
     
     &__container{  
@@ -28,9 +35,6 @@
             }
         }
 }
-
-
-
 
 @media #{$phone}{
     .footer{

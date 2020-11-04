@@ -10,12 +10,71 @@
     background-color: $color-card;
     line-height: .6rem;
     margin-left: 1.85rem;
+    margin-bottom: 1.5rem;
     cursor: pointer;
+    overflow: hidden;
 
+    @media #{$phone}{
+        margin-left: 0;
 
-    .button__price{
-        position: absolute;
-        bottom: 15px;
-        right: 10%;
+    }
+
+    .menu__button:hover .button__check{
+        transform: translateX(0px);
+    }
+
+    .menu__button:hover .fa-check-circle{
+        transform: rotate(1turn);
+    }
+    
+    .button__body{
+        display: flex;
+        justify-content: space-between;
+        width: 90%
+    }
+
+    .button__check{
+        background-color: $color-tertiary;
+        width: 25%;
+        height: 100%;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        transform-origin: right;
+        transform: translate(76px);
+        transition: transform 350ms  ease-in-out;
+        .fa-check-circle{
+            color: $color-card;
+            transition: transform 450ms;
+        }
+    }
+}
+
+.menu__button--anim1{
+    animation: slide 1s;  
+}
+
+.menu__button--anim2{
+    animation: slide 1s 100ms;  
+}
+
+.menu__button--anim3{
+    animation: slide 1s 200ms;  
+}
+
+@keyframes slide{
+    0%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    75%{
+        opacity: .75;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
     }
 }
