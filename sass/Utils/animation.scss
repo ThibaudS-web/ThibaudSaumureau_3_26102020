@@ -1,0 +1,43 @@
+@-webkit-keyframes load-spinner{
+    from{
+        transform: rotateZ(0);
+      
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes load-spinner{
+    from{
+        transform: rotateZ(0);
+      
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes page{
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        }
+    }
+
+@keyframes page{
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        }
+    }
+
+.after_load{
+        -webkit-animation: page 0ms 2.5s both;
+                animation: page 0ms 2.5s both;
+        background-color: white;
+}

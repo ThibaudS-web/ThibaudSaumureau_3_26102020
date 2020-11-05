@@ -54,15 +54,32 @@
 }
 
 .menu__button--anim1{
-    animation: slide 1s;  
+    -webkit-animation: slide 1s;
+            animation: slide 1s;  
 }
 
 .menu__button--anim2{
-    animation: slide 1s 100ms;  
+    -webkit-animation: slide 1s 100ms;
+            animation: slide 1s 100ms;  
 }
 
 .menu__button--anim3{
-    animation: slide 1s 200ms;  
+    -webkit-animation: slide 1s 200ms;
+            animation: slide 1s 200ms;  
+}
+
+@-webkit-keyframes slide{
+    0%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    75%{
+        opacity: .75;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes slide{

@@ -1,6 +1,7 @@
 @import "./Utils/variables.scss";
 @import "./Utils/mixins.scss";
 @import "./Utils/functions.scss";
+@import "./Utils/animation.scss";
 
 @import "./Base/base.scss";
 
@@ -11,6 +12,7 @@
 @import "./Layout/Menu-page/header_menu.scss";
 @import "./Layout/Menu-page/main_menu.scss";
 
+@import "./Components/load_spinner.scss";
 @import "./Components/header_btn.scss";
 @import "./Components/card_menu.scss";
 @import "./Components/btn_functioning.scss";
