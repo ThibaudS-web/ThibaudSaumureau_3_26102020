@@ -1,17 +1,21 @@
-.button__order{
+.btn__order{
     margin: 2rem 10rem;
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
     @include border-btn;
     background: linear-gradient($color-secondary, $color-primary);
     color: $color-card;
     font-weight: bold;
     cursor: pointer;
+    p{
+        margin: 0;
+    }
         &:hover{
         background-color: lighten($color-primary, 35%);
         box-shadow: gray 0px 5px 10px 0px;
     }
     @media #{$tablet} {
         margin: auto;
+        padding:  1rem 3rem;
         margin-top: 1.5rem;
         margin-bottom: 5rem; 
     }

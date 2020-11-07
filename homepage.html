@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./public/css/main.css"/>
     <script src="https://kit.fontawesome.com/d68fdcf578.js" crossorigin="anonymous"></script>
     <title>Bienvenue chez Ohmyfood</title>
 </head>
 <body>
     <div class="loading">
         <div class="spinner"></div>
-        <p class="loading__text">Loading...</p>
+        <p class="loading__text">Please wait ...</p>
     </div> 
 
     <div class="after_load">
@@ -41,24 +41,24 @@
             <section>
                 <div class="functioning">
                     <h2>Fonctionnement</h2>
-                    <button class="functioning__btn btn--hover">
+                    <div class="functioning__btn btn--hover">
                         <div class="btn__number">1</div>
                         <i class="fas fa-mobile-alt"></i>
                         <p>Choisissez un restaurants</p>
-                    </button>
+                    </div>
 
-                    <button class="functioning__btn btn--hover">
+                    <div class="functioning__btn btn--hover">
                         <div class="btn__number">2</div>
                         <i class="fas fa-list-ul"></i>
                         <p>Composez votre menu</p> 
-                    </button>
+                    </div>
                     
                     
-                    <button class="functioning__btn functioning__btn--hover">
+                    <div class="functioning__btn functioning__btn--hover">
                         <div class="btn__number btn__number--hover">3</div>
                         <i class="fas fa-store"></i>
                         <p>Dégustez au restaurant</p>
-                    </button>
+                    </div>
 
                 </div>
             </section>
@@ -67,12 +67,12 @@
                 <div class="restaurant">
                     <h2>Restaurants</h2>
 
-                    <article class="menucard">
+                    <article class="menucard"> 
                         <a class="menucard__link" href="tastepalette_menu.html">
                             <img src="./images/restaurants/taste_palette.jpg" alt="tastepalette" class="menucard__img">
                             <div class="menucard__new">Nouveau</div>
                             <div class="menucard__body">
-                                <p class="menucard__title">La palette du goût</p>
+                                <h2 class="menucard__title">La palette du goût</h2>
                                 <p><span>Ménilmontant</span></p>
                             </div>
                         </a>
@@ -85,7 +85,7 @@
                             <img src="./images/restaurants/enchanted_note.jpg" alt="enchantednote" class="menucard__img">
                             <div class="menucard__new">Nouveau</div>
                             <div class="menucard__body">
-                                <p class="menucard__title">La note enchantée</p>
+                                <h2 class="menucard__title">La note enchantée</h2>
                                 <p><span>Charonne</span></p>
                             </div>
                         </a>
@@ -97,7 +97,7 @@
                         <a class="menucard__link" href="french_menu.html">
                             <img src="./images/restaurants/french_menu.jpg" alt="" class="menucard__img">
                             <div class="menucard__body">
-                                <p class="menucard__title">À la française</p>
+                                <h2 class="menucard__title">À la française</h2>
                                 <p><span>Cité Rouge</span></p>
                             </div>
                         </a>
@@ -109,7 +109,7 @@
                         <a class="menucard__link" href="delightsenses_menu.html">
                             <img src="./images/Restaurants/delight_senses.jpg" alt="delightsenses" class="menucard__img">
                             <div class="menucard__body">
-                                <p class="menucard__title">Le décile des sens</p>
+                                <h2 class="menucard__title">Le décile des sens</h2>
                                 <p><span>Folie Méricourt</span></p>
                             </div>
                         </a>

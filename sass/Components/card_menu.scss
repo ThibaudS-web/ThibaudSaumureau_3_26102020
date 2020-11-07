@@ -16,13 +16,13 @@
         cursor: pointer;  
         font-size: 1.5em;
     }
+
     &__like--hover{
         background-image: linear-gradient($color-secondary, $color-primary);
         opacity: 0;
-        -webkit-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        color: transparent;
         transition: all 350ms;
         transform: scale(1);
         transform-origin: center;
@@ -31,6 +31,7 @@
             opacity: 1;
         }
     }
+
     &__link{
         width: 100%;
         height: 100%;
@@ -50,7 +51,10 @@
         .menucard__body{
             width: 70%;
             margin-left: 5%;
-            
+            h2{
+                font-size: 1.2em;
+                margin: 5% 0;
+            }
         }
     }
     &__img{
@@ -85,5 +89,13 @@
     .menucard{
         width: 95%;
         height: 22%;
+        .menucard__body{
+            h2{
+                font-size: 1em;
+            }
+             p{
+                 font-size: .8em;
+             }
+        }
     }
 }

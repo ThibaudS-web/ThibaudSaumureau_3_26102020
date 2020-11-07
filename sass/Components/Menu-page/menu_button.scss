@@ -1,97 +1,138 @@
-.menu__button{
-    width: 300px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border-radius: 2rem;
-    border: none;
-    box-shadow: gray 0px 2px 8px 0px;
-    background-color: $color-card;
-    line-height: .6rem;
-    margin-left: 1.85rem;
-    margin-bottom: 1.5rem;
+.menu__btn{
+    margin-right: 20px;
+    margin-bottom: 20px;;
+    background-color: white;
+    width: 350px;
+    /*height: 80px;*/
+    border-radius: 1rem;
+    box-shadow: gray 0px 5px 8px;
     cursor: pointer;
+    border: none;
     overflow: hidden;
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start; 
+    padding: 0; 
+    position: relative;
 
     @media #{$phone}{
-        margin-left: 0;
-
+        width: 95%;
+        margin-right: 0;
     }
 
-    .menu__button:hover .button__check{
-        transform: translateX(0px);
+    .price {
+        position: absolute;
+        right: 13px;
+        bottom: 0px;
+        font-weight: bold;
+        transform: translate(0);
+        transition: transform 250ms 60ms linear;
+        @media #{$phone}{
+            font-size: .8em;
+        }
+    }
+    
+    p{
+        margin: 10px 10px;
+    }
+  
+    &:hover .price{
+        transform: translate(-80px);
+        @media #{$phone} {
+            transform: translate(-60px);
+        }
     }
 
-    .menu__button:hover .fa-check-circle{
+    &:hover .fas{
         transform: rotate(1turn);
     }
     
-    .button__body{
-        display: flex;
-        justify-content: space-between;
-        width: 90%
+    &:hover .card__check{
+        transform: translateX(-76px);
+       
+    }
+    
+    &:hover .card__text{
+      width: 72%;
     }
 
-    .button__check{
-        background-color: $color-tertiary;
-        width: 25%;
-        height: 100%;
-        border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        transform-origin: right;
-        transform: translate(76px);
-        transition: transform 350ms  ease-in-out;
-        .fa-check-circle{
-            color: $color-card;
-            transition: transform 450ms;
+    &:hover .card__title{
+        width: 90%;
+    }
+        
+    .card__text{
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: width 200ms 50ms linear;
+        width: 100%;
+        font-size: .9em;
+        @media #{$phone}{
+            font-size: .8em;
         }
+    }
+
+    .card__title{
+        width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: width 200ms 50ms linear;   
     }
 }
 
-.menu__button--anim1{
+.card__check{
+    background-color: #99E2D0;
+    width: 75px;
+    height: 100%;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transform: translate(0px);
+    right: -76px;
+    transition: transform 350ms  ease-in-out;
+    position: absolute;
+    @media #{$phone}{
+        width: 60px;
+    }
+        
+    .fas {
+        color: white;
+        font-size: 2em;
+        transition: transform 450ms;
+        @media #{$phone}{
+            font-size: 1.5em;
+        }
+    }
+
+}
+
+.menu__btn--anim1{
+    -webkit-animation: slide 0.5s;
+            animation: slide 0.5s;  
+}
+
+.menu__btn--anim2{
     -webkit-animation: slide 1s;
             animation: slide 1s;  
 }
 
-.menu__button--anim2{
-    -webkit-animation: slide 1s 100ms;
-            animation: slide 1s 100ms;  
+.menu__btn--anim3{
+    -webkit-animation: slide 1.5s;
+            animation: slide 1.5s;  
 }
 
-.menu__button--anim3{
-    -webkit-animation: slide 1s 200ms;
-            animation: slide 1s 200ms;  
+.menu__btn--anim4{
+    -webkit-animation: slide 2s;
+            animation: slide 2s;  
 }
 
-@-webkit-keyframes slide{
-    0%{
-        transform: translateY(15px);
-        opacity: 0;
-    }
-    75%{
-        opacity: .75;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-@keyframes slide{
-    0%{
-        transform: translateY(15px);
-        opacity: 0;
-    }
-    75%{
-        opacity: .75;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
+
+

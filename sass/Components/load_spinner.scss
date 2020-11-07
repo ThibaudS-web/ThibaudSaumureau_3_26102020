@@ -1,26 +1,28 @@
 .loading{
     position: absolute;
-    top: 50%;
-    right: 50%;
+    width: 190px;
     z-index: -1;
+    top: 30%;
+    right: 45%;
     @media #{$tablet} {
-        right: 45%;
+        top: 20%;
+        right: 36%;
     }
     @media #{$phone} {
-        top: 25%;
-        right: 40%;
+        right: 24%;
+      
     }
 }
 
 .spinner{
     background-color:#99E2D0;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     position: relative;
-    background: conic-gradient(#009688, transparent);
-    -webkit-animation: load-spinner 1s linear infinite;
-            animation: load-spinner 1s linear infinite;
+    background: -webkit-repeating-linear-gradient($color-secondary, $color-primary, $color-tertiary);
+    -webkit-animation: load-spinner .7s linear infinite;
+            animation: load-spinner .7s linear infinite;
 }
 
 .spinner::before,
@@ -31,26 +33,19 @@
 }
 
 .spinner::before{
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 130px;
     top: 10px;
     left: 10px;
     background-color: white;
     
 }
 
-.spinner::after{
-    height: 10px;
-    width: 10px;
-    background-color:#99E2D0;
-    top: 0;
-    left: 45px;
-}
-
 .loading__text{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color:#99E2D0;
+    color: $color-primary;
     text-align: center;
     margin-top: 15px;
+    
 }

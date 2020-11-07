@@ -3,9 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./public/css/main.css"/>
+    <script src="https://kit.fontawesome.com/d68fdcf578.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood - La palette du goût</title>
 </head>
 <body>
+    <header>
+        <div class="header__menu">
+            <a class="header__link" href="./homepage.html">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <img src="./images/logo/ohmyfood_black.svg" alt="ohmyfood" class="header__logo">
+        </div>
+    </header>
     
+    <main>
+        
+        <img src="./images/restaurants/french_menu.jpg" alt="À la française" class="picture_menu">
+        <div class="menu">
+            <div class="menu__head">
+                <h1 class="menu__head_title">La palette du goût</h1>
+                <i class="far fa-heart menu__like"></i>
+                <i class="fas fa-heart menu__like menu__like--hover"></i>
+            </div>
+<!-- ENTREES -->
+            <div class="part_menu">
+               <h3 class="menu__section_title">ENTRÉES</h3>
+
+               <div class="menu__btn menu__btn--anim1">
+                    <div class="menu__body">
+                        <p class="card__title">Fricassée d'escargot</p>
+                        <p class="card__text"><span>Au piment d'espelette</span></p>
+                    </div>
+                    <p class="price">25€</p>
+                    <div class="card__check check--hover">
+                        <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim2">
+                    <div class="menu__body">
+                        <p class="card__title">Foie gras de canard mi-cuit</p>
+                        <p class="card__text"><span>Et ses copeaux de truffe noire</span></p>
+                    </div>
+                    <p class="price">35€</p>
+                    <div class="card__check check--hover">
+                        <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim3">
+                    <div class="menu__body">
+                        <p class="card__title">Oeuf au plat</p>
+                        <p class="card__text"><span>Assaissonée à la truffe sur lit de caviar</span></p>
+                    </div>
+                    <p class="price">20€</p>
+                    <div class="card__check check--hover">
+                        <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+            </div>
+<!--PLATS-->
+            <div class="part_menu"> 
+                <h3 class="menu__section_title">PLATS</h3>
+        
+                <div class="menu__btn menu__btn--anim1">
+                    <div class="menu__body">
+                        <p class="card__title">Filet de boeuf aux herbes</p>
+                        <p class="card__text"><span>Accompagnées de sa ribambelle de <br>légumes</span></p>
+                    </div>
+                    <p class="price">40€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim2">
+                    <div class="menu__body">
+                        <p class="card__title">Parmentier de queue de boeuf</p>
+                        <p class="card__text"><span>À La truffe noire sur sa purée de panais</span></p>
+                    </div>
+                    <p class="price">35€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim3">
+                    <div class="menu__body">
+                        <p class="card__title">Filet de Turbot</p>
+                        <p class="card__text"><span>Aux agrumes</span></p>
+                    </div>
+                    <p class="price">44€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+            </div>
+<!--DESSERTS-->
+            <div class="part_menu">
+                <h3 class="menu__section_title">DESSERTS</h3>
+
+                <div class="menu__btn menu__btn--anim1">
+                    <div class="menu__body">
+                        <p class="card__title">Paris-Brest</p>
+                        <p class="card__text"><span>Revisité</span></p>
+                    </div>
+                    <p class="price">18€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim2">
+                    <div class="menu__body">
+                        <p class="card__title">Macaron au chocolat d'exception</p>
+                        <p class="card__text"><span>Et glace à la vanille de Madagascar</span></p>
+                    </div>
+                    <p class="price">22€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+
+                <div class="menu__btn menu__btn--anim3">
+                    <div class="menu__body">
+                        <p class="card__title">Mousse au chocolat</p>
+                        <p class="card__text"><span>Au piment d'espelette et à la truffe noire</span></p>
+                    </div>
+                    <p class="price">23€</p>
+                    <div class="card__check check--hover">
+                    <i class="fas fas--hover fa-check-circle"></i>
+                    </div>  
+                </div>
+            </div>
+<!--ORDER--> 
+            <div class="contain-btn__order">
+                <div class="btn__order">
+                    <p>Commander</p>
+                </div>  
+            </div>
+        </div>
+    </main>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer__container">
+        <img src="images/logo/ohmyfood_white.svg" alt="Ohmyfood" class="footer__logo">
+        
+        <div class="footer__iconlink">
+            <img src="./images/logo/utensils-solid.svg" alt="suggest a restaurant">
+            <a href="" class="footer__link--hover">Proposer un restaurant</a>
+        </div>
+
+        <div class="footer__iconlink">
+            <img src="images/logo/partner.svg" alt="Becoming a Partner">
+            <a href="" class="footer__link--hover">Devenir partenaire</a>
+        </div>
+
+        <a href="" class="footer__link footer__link--hover">Mentions légales</a>
+        <a href="mailto:ohmyfood.xxxx@gmail.com" class="footer__link footer__link--hover">Contact</a>
+    </div>
+</footer>
 </body>
 </html>

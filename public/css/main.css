@@ -1,12 +1,28 @@
 /*color*/
 /*media queries*/
 /*rgb(246, 246, 246)*/
+@-webkit-keyframes load-spinner {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
 @keyframes load-spinner {
   from {
     transform: rotateZ(0);
   }
   to {
     transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes page {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes page {
@@ -18,10 +34,31 @@
   }
 }
 .after_load {
+  -webkit-animation: page 0ms 2.5s both;
   animation: page 0ms 2.5s both;
   background-color: white;
 }
 
+@-webkit-keyframes slide {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("../../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
@@ -54,7 +91,7 @@ span {
   font-weight: lighter;
 }
 
-p, h2, h3, h4, a {
+p, h2, h3, h4, a, button {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
@@ -262,6 +299,7 @@ a {
 .menu .menu__like--hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
@@ -292,7 +330,7 @@ h3 {
   h1 {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-left: 1.85rem;
+    margin-left: 1.5rem;
   }
 
   h3 {
@@ -342,30 +380,32 @@ h3 {
 }
 .loading {
   position: absolute;
-  top: 50%;
-  right: 50%;
+  width: 190px;
   z-index: -1;
+  top: 30%;
+  right: 45%;
 }
 @media only screen and (max-width: 768px) {
   .loading {
-    right: 45%;
+    top: 20%;
+    right: 36%;
   }
 }
 @media only screen and (max-width: 500px) {
   .loading {
-    top: 25%;
-    right: 40%;
+    right: 24%;
   }
 }
 
 .spinner {
   background-color: #99E2D0;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   position: relative;
-  background: conic-gradient(#009688, transparent);
-  animation: load-spinner 1s linear infinite;
+  background: -webkit-repeating-linear-gradient(#FF79DA, #9356DC, #99E2D0);
+  -webkit-animation: load-spinner 0.7s linear infinite;
+  animation: load-spinner 0.7s linear infinite;
 }
 
 .spinner::before,
@@ -376,25 +416,17 @@ h3 {
 }
 
 .spinner::before {
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   top: 10px;
   left: 10px;
   background-color: white;
 }
 
-.spinner::after {
-  height: 10px;
-  width: 10px;
-  background-color: #99E2D0;
-  top: 0;
-  left: 45px;
-}
-
 .loading__text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #99E2D0;
+  color: #9356DC;
   text-align: center;
   margin-top: 15px;
 }
@@ -441,10 +473,9 @@ h3 {
 .menucard__like--hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
   transition: all 350ms;
   transform: scale(1);
   transform-origin: center;
@@ -473,6 +504,10 @@ h3 {
 .menucard__link .menucard__body {
   width: 70%;
   margin-left: 5%;
+}
+.menucard__link .menucard__body h2 {
+  font-size: 1.2em;
+  margin: 5% 0;
 }
 .menucard__img {
   -o-object-fit: cover;
@@ -503,6 +538,12 @@ h3 {
     width: 95%;
     height: 22%;
   }
+  .menucard .menucard__body h2 {
+    font-size: 1em;
+  }
+  .menucard .menucard__body p {
+    font-size: 0.8em;
+  }
 }
 .functioning__btn {
   width: 300px;
@@ -530,6 +571,7 @@ h3 {
   font-size: 1.5em;
 }
 .functioning__btn .btn__number {
+  font-family: "Roboto", sans-serif;
   padding: 0.5rem;
   border-radius: 5rem;
   background-color: #9356DC;
@@ -546,88 +588,147 @@ h3 {
 @media only screen and (max-width: 500px) {
   .functioning__btn {
     padding: 1rem 2rem;
-    width: 80%;
+  }
+  .functioning__btn .fas {
+    font-size: 1.2em;
   }
 }
-.menu__button {
-  width: 300px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: 2rem;
-  border: none;
-  box-shadow: gray 0px 2px 8px 0px;
-  background-color: #ffffff;
-  line-height: 0.6rem;
-  margin-left: 1.85rem;
-  margin-bottom: 1.5rem;
+.menu__btn {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  width: 350px;
+  /*height: 80px;*/
+  border-radius: 1rem;
+  box-shadow: gray 0px 5px 8px;
   cursor: pointer;
+  border: none;
   overflow: hidden;
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  position: relative;
 }
 @media only screen and (max-width: 500px) {
-  .menu__button {
-    margin-left: 0;
+  .menu__btn {
+    width: 95%;
+    margin-right: 0;
   }
 }
-.menu__button .menu__button:hover .button__check {
-  transform: translateX(0px);
+.menu__btn .price {
+  position: absolute;
+  right: 13px;
+  bottom: 0px;
+  font-weight: bold;
+  transform: translate(0);
+  transition: transform 250ms 60ms linear;
 }
-.menu__button .menu__button:hover .fa-check-circle {
+@media only screen and (max-width: 500px) {
+  .menu__btn .price {
+    font-size: 0.8em;
+  }
+}
+.menu__btn p {
+  margin: 10px 10px;
+}
+.menu__btn:hover .price {
+  transform: translate(-80px);
+}
+@media only screen and (max-width: 500px) {
+  .menu__btn:hover .price {
+    transform: translate(-60px);
+  }
+}
+.menu__btn:hover .fas {
   transform: rotate(1turn);
 }
-.menu__button .button__body {
-  display: flex;
-  justify-content: space-between;
+.menu__btn:hover .card__check {
+  transform: translateX(-76px);
+}
+.menu__btn:hover .card__text {
+  width: 72%;
+}
+.menu__btn:hover .card__title {
   width: 90%;
 }
-.menu__button .button__check {
+.menu__btn .card__text {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: width 200ms 50ms linear;
+  width: 100%;
+  font-size: 0.9em;
+}
+@media only screen and (max-width: 500px) {
+  .menu__btn .card__text {
+    font-size: 0.8em;
+  }
+}
+.menu__btn .card__title {
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: width 200ms 50ms linear;
+}
+
+.card__check {
   background-color: #99E2D0;
-  width: 25%;
+  width: 75px;
   height: 100%;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  transform-origin: right;
-  transform: translate(76px);
+  transform: translate(0px);
+  right: -76px;
   transition: transform 350ms ease-in-out;
+  position: absolute;
 }
-.menu__button .button__check .fa-check-circle {
-  color: #ffffff;
+@media only screen and (max-width: 500px) {
+  .card__check {
+    width: 60px;
+  }
+}
+.card__check .fas {
+  color: white;
+  font-size: 2em;
   transition: transform 450ms;
 }
+@media only screen and (max-width: 500px) {
+  .card__check .fas {
+    font-size: 1.5em;
+  }
+}
 
-.menu__button--anim1 {
+.menu__btn--anim1 {
+  -webkit-animation: slide 0.5s;
+  animation: slide 0.5s;
+}
+
+.menu__btn--anim2 {
+  -webkit-animation: slide 1s;
   animation: slide 1s;
 }
 
-.menu__button--anim2 {
-  animation: slide 1s 100ms;
+.menu__btn--anim3 {
+  -webkit-animation: slide 1.5s;
+  animation: slide 1.5s;
 }
 
-.menu__button--anim3 {
-  animation: slide 1s 200ms;
+.menu__btn--anim4 {
+  -webkit-animation: slide 2s;
+  animation: slide 2s;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.button__order {
+.btn__order {
   margin: 2rem 10rem;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   border-radius: 2rem;
   border: none;
   box-shadow: gray 0px 2px 8px 0px;
@@ -637,13 +738,17 @@ h3 {
   font-weight: bold;
   cursor: pointer;
 }
-.button__order:hover {
+.btn__order p {
+  margin: 0;
+}
+.btn__order:hover {
   background-color: #f2eafb;
   box-shadow: gray 0px 5px 10px 0px;
 }
 @media only screen and (max-width: 768px) {
-  .button__order {
+  .btn__order {
     margin: auto;
+    padding: 1rem 3rem;
     margin-top: 1.5rem;
     margin-bottom: 5rem;
   }
