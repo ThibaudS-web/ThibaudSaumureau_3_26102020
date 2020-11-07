@@ -40,7 +40,7 @@
 
 @-webkit-keyframes slide {
   0% {
-    transform: translateY(20px);
+    transform: translateY(15px);
     opacity: 0;
   }
   100% {
@@ -402,7 +402,7 @@ h3 {
   width: 150px;
   border-radius: 50%;
   position: relative;
-  background: -webkit-repeating-linear-gradient(#FF79DA, #9356DC, #99E2D0);
+  background: repeating-linear-gradient(#FF79DA, #9356DC, #99E2D0);
   -webkit-animation: load-spinner 0.7s linear infinite;
   animation: load-spinner 0.7s linear infinite;
 }
@@ -546,7 +546,7 @@ h3 {
 }
 .functioning__btn {
   width: 300px;
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
   margin: 20px 20px;
   border-radius: 2rem;
   border: none;
@@ -619,7 +619,7 @@ h3 {
   bottom: 0px;
   font-weight: bold;
   transform: translate(0);
-  transition: transform 250ms 60ms linear;
+  transition: transform 200ms 60ms linear;
 }
 @media only screen and (max-width: 500px) {
   .menu__btn .price {
@@ -644,16 +644,16 @@ h3 {
   transform: translateX(-76px);
 }
 .menu__btn:hover .card__text {
-  width: 72%;
+  width: 60%;
 }
 .menu__btn:hover .card__title {
-  width: 90%;
+  width: 70%;
 }
 .menu__btn .card__text {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: width 200ms 50ms linear;
+  transition: width 250ms linear;
   width: 100%;
   font-size: 0.9em;
 }
@@ -682,7 +682,7 @@ h3 {
   border: none;
   transform: translate(0px);
   right: -76px;
-  transition: transform 350ms ease-in-out;
+  transition: transform 450ms ease-in-out;
   position: absolute;
 }
 @media only screen and (max-width: 500px) {

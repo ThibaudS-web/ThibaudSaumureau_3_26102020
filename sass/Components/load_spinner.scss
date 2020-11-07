@@ -20,7 +20,7 @@
     width: 150px;
     border-radius: 50%;
     position: relative;
-    background: -webkit-repeating-linear-gradient($color-secondary, $color-primary, $color-tertiary);
+    background: repeating-linear-gradient($color-secondary, $color-primary, $color-tertiary);
     -webkit-animation: load-spinner .7s linear infinite;
             animation: load-spinner .7s linear infinite;
 }

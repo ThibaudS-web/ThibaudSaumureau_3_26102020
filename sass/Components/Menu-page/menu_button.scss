@@ -24,7 +24,7 @@
         bottom: 0px;
         font-weight: bold;
         transform: translate(0);
-        transition: transform 250ms 60ms linear;
+        transition: transform 200ms 60ms linear;
         @media #{$phone}{
             font-size: .8em;
         }
@@ -51,18 +51,18 @@
     }
     
     &:hover .card__text{
-      width: 72%;
+      width: 60%;
     }
 
     &:hover .card__title{
-        width: 90%;
+        width: 70%;
     }
-        
+    
     .card__text{
         overflow-x: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        transition: width 200ms 50ms linear;
+        transition: width 250ms linear;
         width: 100%;
         font-size: .9em;
         @media #{$phone}{
@@ -91,7 +91,7 @@
     border: none;
     transform: translate(0px);
     right: -76px;
-    transition: transform 350ms  ease-in-out;
+    transition: transform 450ms  ease-in-out;
     position: absolute;
     @media #{$phone}{
         width: 60px;

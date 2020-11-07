@@ -58,10 +58,10 @@
         }
     }
     &__img{
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: 50% 60%;
-           object-position: 50% 60%;
+           -o-object-fit: cover;
+              object-fit: cover;
+           -o-object-position: 50% 60%;
+              object-position: 50% 60%;
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         width: 100%;
