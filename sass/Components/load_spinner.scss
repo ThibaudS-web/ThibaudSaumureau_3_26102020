@@ -10,8 +10,11 @@
     }
     @media #{$phone} {
         right: 24%;
-      
     }
+    @media #{$phone-small} {
+        right: 15%;
+    }
+
 }
 
 .spinner{
@@ -38,14 +41,11 @@
     top: 10px;
     left: 10px;
     background-color: white;
-    
 }
 
 .loading__text{
     font-size: 1.8rem;
     font-weight: bold;
     color: $color-primary;
-    text-align: center;
     margin-top: 15px;
-    
 }
