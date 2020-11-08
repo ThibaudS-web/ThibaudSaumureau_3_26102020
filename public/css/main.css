@@ -267,7 +267,7 @@ a {
 @media only screen and (max-width: 500px) {
   .header__logo {
     width: 150px;
-    margin: auto;
+    margin: 1rem auto;
   }
 
   .fa-arrow-left {
