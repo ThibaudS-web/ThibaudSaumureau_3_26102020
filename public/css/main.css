@@ -549,10 +549,17 @@ h3 {
     width: 95%;
     height: 22%;
   }
-  .menucard .menucard__body h2 {
+  .menucard__like {
+    bottom: 25px;
+  }
+  .menucard__body {
+    line-height: 0.7em;
+    margin-top: 3%;
+  }
+  .menucard h2 {
     font-size: 1em;
   }
-  .menucard .menucard__body p {
+  .menucard p {
     font-size: 0.8em;
   }
 }
