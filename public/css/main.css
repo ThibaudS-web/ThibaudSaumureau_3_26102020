@@ -70,13 +70,22 @@
   src: url("../../fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
 }
 body {
-  padding: 0 2rem;
   max-width: 1440px;
   box-sizing: border-box;
   margin: auto;
 }
 @media only screen and (max-width: 768px) {
   body {
+    padding: 0;
+  }
+}
+body main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 1.85rem;
+}
+@media only screen and (max-width: 768px) {
+  body main {
     padding: 0;
   }
 }
@@ -97,6 +106,10 @@ p, h2, h3, h4, a, button {
 
 a {
   text-decoration: none;
+}
+
+.header__logo {
+  margin: 1rem 2rem;
 }
 
 .searchbar {
@@ -242,7 +255,6 @@ a {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 1rem 0rem;
 }
 .header__menu .fas {
   display: flex;

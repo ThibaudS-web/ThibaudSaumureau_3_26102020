@@ -11,14 +11,22 @@
     src: url('../../fonts/Shrikhand/Shrikhand-Regular.ttf') format('truetype');
 }
 body{
-    padding: 0 2rem;
+    
     max-width: 1440px;
     box-sizing: border-box;
     margin: auto;
     @media #{$tablet} {
         padding: 0;
     }
-    
+
+    main {
+        max-width: 1440px;
+        margin: auto;
+        padding: 0 1.85rem;
+        @media #{$tablet} {
+            padding: 0;
+        }
+    }
 }
 
 h1{
