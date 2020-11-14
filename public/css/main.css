@@ -676,8 +676,8 @@ h3 {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: width 350ms linear;
-  width: 100%;
+  transition: width 450ms linear;
+  width: 80%;
   font-size: 0.9em;
 }
 @media only screen and (max-width: 500px) {
@@ -716,7 +716,7 @@ h3 {
 .card__check .fas {
   color: white;
   font-size: 2em;
-  transition: transform 450ms;
+  transition: transform 450ms 60ms;
 }
 @media only screen and (max-width: 500px) {
   .card__check .fas {
