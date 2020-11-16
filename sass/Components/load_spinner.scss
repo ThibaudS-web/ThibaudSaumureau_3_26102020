@@ -28,14 +28,10 @@
             animation: load-spinner .7s linear infinite;
 }
 
-.spinner::before,
-.spinner::after{
+.spinner::before{
     content: '';
     position: absolute;
     border-radius: 50%;
-}
-
-.spinner::before{
     width: 130px;
     height: 130px;
     top: 10px;

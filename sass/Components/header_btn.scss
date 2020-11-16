@@ -5,6 +5,7 @@
     color: $color-card;
     font-weight: bold;
     cursor: pointer;
+    width: 280px;
         &:hover{
         background-color: lighten($color-primary, 35%);
         box-shadow: gray 0px 5px 10px 0px;

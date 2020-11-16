@@ -140,13 +140,17 @@ a {
   background-color: #fcfcfc;
   padding: 2rem 1.85rem;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header__body h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 .header__body h2 {
-  width: 75%;
   font-size: 1.5rem;
-}
-.header__body p {
-  width: 80%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -424,14 +428,10 @@ h3 {
   animation: load-spinner 0.7s linear infinite;
 }
 
-.spinner::before,
-.spinner::after {
+.spinner::before {
   content: "";
   position: absolute;
   border-radius: 50%;
-}
-
-.spinner::before {
   width: 130px;
   height: 130px;
   top: 10px;
@@ -456,6 +456,7 @@ h3 {
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  width: 280px;
 }
 .header__btn:hover {
   background-color: #f2eafb;
