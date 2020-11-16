@@ -148,6 +148,8 @@ a {
 .header__body h1 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem;
 }
 .header__body h2 {
   font-size: 1.5rem;
