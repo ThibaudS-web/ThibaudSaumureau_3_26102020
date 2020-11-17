@@ -1,6 +1,4 @@
-@mixin color-logo($color: lightness-swift($color-logo)) {
-    color: $color;
-}
+
 
 @mixin border-btn {
     border-radius: 2rem;
@@ -26,8 +24,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@mixin color-btn($color: lightness-shift($color-primary)){
-    color: gray
 }

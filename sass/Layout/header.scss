@@ -2,7 +2,6 @@
     margin: 1rem 2rem;
 }
 
-
 .searchbar{
     display: flex;
     justify-content: center;
@@ -14,6 +13,7 @@
         margin-right: 2%;
         @include size_icon;
     }
+    
     &__input{
         width: 140px;
         border: none;

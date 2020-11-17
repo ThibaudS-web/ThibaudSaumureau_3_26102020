@@ -316,7 +316,6 @@ a {
 .menu .menu__like--hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
@@ -491,7 +490,6 @@ h3 {
 .menucard__like--hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: all 350ms;

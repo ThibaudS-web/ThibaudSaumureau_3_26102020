@@ -34,7 +34,6 @@
     .menu__like--hover{
         background-image: linear-gradient($color-secondary, $color-primary);
         opacity: 0;
-        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
